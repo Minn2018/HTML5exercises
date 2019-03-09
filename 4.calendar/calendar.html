@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>calendar</title>
+    <link rel="stylesheet" href="calendar.css">
+    <script src="calendar.js"></script>
+</head>
+<body onload="showDate()">
+    <h3>电子日历的设计与实现</h3>
+    <hr>
+
+    <div id="calendar">
+        <!-- 功能区 -->
+     <div>
+         <button onclick="lastMonth()">上个月</button>
+         <div id="info"></div>
+         <button onclick="nextMonth()">下个月</button>
+         <div class="clear"></div>
+     </div>
+
+     <!-- 星期几 -->
+     <div>
+         <div class="day">日</div>
+         <div class="day">一</div>
+         <div class="day">二</div>
+         <div class="day">三</div>
+         <div class="day">四</div>
+         <div class="day">五</div>
+         <div class="day">六</div>
+         <div class="clear"></div>
+     </div>
+
+     <!-- 日期 -->
+     <div id="date"></div>
+    </div>
+    
+
+</body>
+</html>
