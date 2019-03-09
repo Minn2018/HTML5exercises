@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>table</title>
+    <style>
+        #recruit{
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+    
+            
+        }
+        #recruit th,#recruit td{
+            border: 1px solid purple;
+            padding: 7px;
+        }
+        #recruit th{
+            background-color: purple;
+            color: white;
+        }
+        #recruit tr.odd{
+            background-color: #eaadea;
+        }
+        #recruit caption{
+            padding: 5px;
+            border: 1px solid purple;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>
+        商务风格表格的设计与实现
+    </h3>
+    <hr>
+    <table id="recruit" border="1">
+        <caption>招聘信息表</caption>
+    <th>地点</th><th>招聘职位</th><th>公司</th>
+    <tr><td>全国</td><td>产品培训生</td><td>腾讯</td></tr>
+    <tr class="odd"><td>全国</td><td>前端开发工程师</td><td>阿里巴巴</td> </tr>
+    <tr><td>上海</td>
+    <td>交互设计师</td>
+    <td>网易游戏</td>
+    </tr>
+    <tr class="odd">
+        <td>北京</td>
+        <td>视觉分析师</td>
+        <td>360</td>
+    </tr>
+    <tr>
+        <td>深圳</td>
+        <td>数据分析师</td>
+        <td>IBM</td>
+    </tr>
+    <tr class="odd">
+        <td>杭州</td>
+        <td>数据研发工程师</td>
+        <td>微软</td>
+    </tr>
+    </table>
+</body>
+</html>
