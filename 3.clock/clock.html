@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>clock</title>
+    <link rel="stylesheet" href="clock.css">
+</head>
+ <body onload="getCurrentTime()"> <!--加载网页时调用函数 -->
+    <h3>电子时钟的设计与实现</h3>
+    <hr>
+    <div id="clock">
+        <div class="box" id="h"></div>
+        <div class="dot">:</div>
+        <div class="box" id="m"> </div>
+        <div class="dot">:</div>
+        <div class="box" id="s"></div>
+    </div>
+    <script>
+        function getCurrentTime(){
+            var hour = document.getElementById("h");
+            var min = document.getElementById("m");
+            var sec = document.getElementById("s");
+
+            // 创建date对象获取时间
+            var time = new Date();
+            var h = time.getHours();
+            var m = time.getMinutes();
+            var s = time.getSeconds();
+            
+            // 个位数时补零
+            if(h<10) h='0'+h;
+            if(m<10) m='0'+m;
+            if(s<10) s='0'+s;
+
+            // 将获取到的时间显示在HTML里
+            hour.innerHTML = h;
+            min.innerHTML = m;
+            sec.innerHTML = s;
+        }
+
+        // 每1000ms更新一次函数getCurrentTime
+        // 否则只会显示打开网页时的时间
+        setInterval(getCurrentTime,1000);
+    </script>
+
+</body>
+</html>
