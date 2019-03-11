@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="recycle.css">
+    <title>Document</title>
+</head>
+<body>
+    <h3>回收站拖拽回收效果</h3>
+    <hr>
+    <!-- 文件夹 -->
+    <div id="container">
+        <div id="file1"class="folder" draggable="true" ondragstart="drag(event)">file 1</div>
+        <div id="file2"class="folder" draggable="true" ondragstart="drag(event)">file 2</div>
+        <div id="file3"class="folder" draggable="true" ondragstart="drag(event)">file 3</div>
+        <div id="file4"class="folder" draggable="true" ondragstart="drag(event)">file 4</div>
+    </div>
+    <!-- 回收站 -->
+    <div id="recycle" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+    <script src="recycle.js"></script>
+</body>
+</html>
